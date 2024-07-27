@@ -1,13 +1,15 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 20px;
+    direction: ltr;
 }
 
-#quiz-container {
-    margin-bottom: 20px;
+body.fa {
+    direction: rtl;
 }
 
-#result-container {
-    margin-top: 20px;
-    font-weight: bold;
+.navbar .nav-link {
+    margin-right: 1rem;
+}
+
+.navbar .nav-link:last-child {
+    margin-right: 0;
 }

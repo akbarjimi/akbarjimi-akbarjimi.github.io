@@ -1,0 +1,40 @@
+{
+  "chapter1": {
+    "easy": [
+      {
+        "question": "Easy Question 1?",
+        "options": [
+          "Option 1",
+          "Option 2",
+          "Option 3",
+          "Option 4"
+        ],
+        "answer": "Option 1"
+      }
+    ],
+    "medium": [
+      {
+        "question": "Medium Question 1?",
+        "options": [
+          "Option 1",
+          "Option 2",
+          "Option 3",
+          "Option 4"
+        ],
+        "answer": "Option 2"
+      }
+    ],
+    "hard": [
+      {
+        "question": "Hard Question 1?",
+        "options": [
+          "Option 1",
+          "Option 2",
+          "Option 3",
+          "Option 4"
+        ],
+        "answer": "Option 3"
+      }
+    ]
+  }
+}

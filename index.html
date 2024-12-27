@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>DDIA Quiz Index</title>
+
+    <!-- Bootstrap CSS (CDN) -->
+    <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+    />
+
+    <!-- jQuery (CDN) -->
+    <script
+            src="https://code.jquery.com/jquery-3.5.1.min.js"
+            integrity="sha384-NiZp2Lo6mE5eSQJXz8JzB4abG9Or13uB8ZLrsCGLWxh45+xeFEvfX+fKxyv3R5fr"
+            crossorigin="anonymous">
+    </script>
+
+    <!-- Optional Bootstrap JS (CDN) -->
+    <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js">
+    </script>
+
+    <style>
+        /* Four-color palette: tweak as desired for harmony */
+        :root {
+            --color-one: #f8f3e7;  /* Light base */
+            --color-two: #FFA26B;  /* Accent */
+            --color-three: #FFD56B;/* Secondary accent */
+            --color-four: #19647E; /* Deep contrast */
+        }
+
+        body {
+            background-color: var(--color-one);
+            color: var(--color-four);
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .chapter-card {
+            background-color: var(--color-two);
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.2s ease;
+            cursor: pointer;
+        }
+
+        .chapter-card:hover {
+            transform: scale(1.05);
+            background-color: var(--color-three);
+        }
+
+        .chapter-icon {
+            width: 60px;
+            height: 60px;
+            margin-bottom: 10px;
+        }
+
+        .about-section {
+            background-color: var(--color-four);
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        /* Ensure each row has four positions on desktop, but also handle mobile layout */
+        .chapter-row {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container my-5">
+    <h1 class="text-center mb-4">Designing Data-Intensive Applications Quiz</h1>
+
+    <!-- Row 1 (Chapters 1-4) -->
+    <div class="row chapter-row">
+        <div class="col-12 col-sm-6 col-md-3 mb-4">
+            <a href="chapter1.html" style="text-decoration: none; color: inherit;">
+                <div class="chapter-card">
+                    <!-- Example SVG icon, replace as needed -->
+                    <svg class="chapter-icon" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M13 2v2h-2V2H4v20h16V2h-7zM9 6V4h2v2h2v2h-2v2H9V8H7V6h2zm8 14H7V10h2v2h2V10h2v2h2v8z"></path>
+                    </svg>
+                    <h5>Chapter 1</h5>
+                    <p>Reliable, Scalable, and Maintainable Applications</p>
+                </div>
+            </a>
+        </div>
+
+        <div class="col-12 col-sm-6 col-md-3 mb-4">
+            <a href="chapter2.html" style="text-decoration: none; color: inherit;">
+                <div class="chapter-card">
+                    <svg class="chapter-icon" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M4 4h16v2H4V4zm0 4h16v2H4V8zm0 4h16v2H4v-2zm0 4h16v2H4v-2z"></path>
+                    </svg>
+                    <h5>Chapter 2</h5>
+                    <p>Data Models and Query Languages</p>
+                </div>
+            </a>
+        </div>
+
+        <div class="col-12 col-sm-6 col-md-3 mb-4">
+            <a href="chapter3.html" style="text-decoration: none; color: inherit;">
+                <div class="chapter-card">
+                    <svg class="chapter-icon" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M3 3h18v2H3V3zm2 4h14v14H5V7zm2 2v10h10V9H7z"></path>
+                    </svg>
+                    <h5>Chapter 3</h5>
+                    <p>Storage and Retrieval</p>
+                </div>
+            </a>
+        </div>
+
+        <div class="col-12 col-sm-6 col-md-3 mb-4">
+            <a href="chapter4.html" style="text-decoration: none; color: inherit;">
+                <div class="chapter-card">
+                    <svg class="chapter-icon" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M19 2H5c-1.1 0-2 .9-2 2v2h18V4c0-1.1-.9-2-2-2zM3 20c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V8H3v12zm3-8h8v2H6v-2z"></path>
+                    </svg>
+                    <h5>Chapter 4</h5>
+                    <p>Encoding and Evolution</p>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <!-- Row 2 (Chapters 5-8) -->
+    <div class="row chapter-row">
+        <div class="col-12 col-sm-6 col-md-3 mb-4">
+            <a href="chapter5.html" style="text-decoration: none; color: inherit;">
+                <div class="chapter-card">
+                    <svg class="chapter-icon" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M17 8h2v8h-2V8zM5 8h2v8H5V8zm10 10v2H9v-2H7l5-5 5 5h-2zM12 6L7 11h2v2h6v-2h2L12 6z"></path>
+                    </svg>
+                    <h5>Chapter 5</h5>
+                    <p>Replication</p>
+                </div>
+            </a>
+        </div>
+
+        <div class="col-12 col-sm-6 col-md-3 mb-4">
+            <a href="chapter6.html" style="text-decoration: none; color: inherit;">
+                <div class="chapter-card">
+                    <svg class="chapter-icon" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M4 4h6v6H4V4zm0 10h6v6H4v-6zm10 0h6v6h-6v-6zm6-10v6h-6V4h6z"></path>
+                    </svg>
+                    <h5>Chapter 6</h5>
+                    <p>Partitioning</p>
+                </div>
+            </a>
+        </div>
+
+        <div class="col-12 col-sm-6 col-md-3 mb-4">
+            <a href="chapter7.html" style="text-decoration: none; color: inherit;">
+                <div class="chapter-card">
+                    <svg class="chapter-icon" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M18 2H6c-1.1 0-2 .9-2 2v12h2V4h12v16H8v2h10c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM4 14l4 4 4-4H4z"></path>
+                    </svg>
+                    <h5>Chapter 7</h5>
+                    <p>Transactions</p>
+                </div>
+            </a>
+        </div>
+
+        <div class="col-12 col-sm-6 col-md-3 mb-4">
+            <a href="chapter8.html" style="text-decoration: none; color: inherit;">
+                <div class="chapter-card">
+                    <svg class="chapter-icon" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2C8.13 2 5 5.13 5 9c0 3.5 2.61 6.42 6 6.92V17H9v2h6v-2h-2v-1.08c3.39-.5 6-3.42 6-6.92 0-3.87-3.13-7-7-7z"></path>
+                    </svg>
+                    <h5>Chapter 8</h5>
+                    <p>The Trouble with Distributed Systems</p>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <!-- Row 3 (Chapters 9-12) -->
+    <div class="row chapter-row">
+        <div class="col-12 col-sm-6 col-md-3 mb-4">
+            <a href="chapter9.html" style="text-decoration: none; color: inherit;">
+                <div class="chapter-card">
+                    <svg class="chapter-icon" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M8 24h8v-2H8v2zM3 20h18v-2H3v2zm2-5h14v-2H5v2zm2-5h10V8H7v2zM5 4v2h14V4H5z"></path>
+                    </svg>
+                    <h5>Chapter 9</h5>
+                    <p>Consistency and Consensus</p>
+                </div>
+            </a>
+        </div>
+
+        <div class="col-12 col-sm-6 col-md-3 mb-4">
+            <a href="chapter10.html" style="text-decoration: none; color: inherit;">
+                <div class="chapter-card">
+                    <svg class="chapter-icon" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M5 4v3h5V4H5zm9 0v3h5V4h-5zM5 10v10h5V10H5zm9 0v6h5v-6h-5z"></path>
+                    </svg>
+                    <h5>Chapter 10</h5>
+                    <p>Batch Processing</p>
+                </div>
+            </a>
+        </div>
+
+        <div class="col-12 col-sm-6 col-md-3 mb-4">
+            <a href="chapter11.html" style="text-decoration: none; color: inherit;">
+                <div class="chapter-card">
+                    <svg class="chapter-icon" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M11 2v20h2V2h-2zm-9 9v2h20v-2H2z"></path>
+                    </svg>
+                    <h5>Chapter 11</h5>
+                    <p>Stream Processing</p>
+                </div>
+            </a>
+        </div>
+
+        <div class="col-12 col-sm-6 col-md-3 mb-4">
+            <a href="chapter12.html" style="text-decoration: none; color: inherit;">
+                <div class="chapter-card">
+                    <svg class="chapter-icon" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M10 2h4v2h-4V2zM2 10h2v4H2v-4zm18 0h2v4h-2v-4zM6 18v2H4c-1.1 0-2-.9-2-2v-2h2v2h2zm14 0v2c0 1.1-.9 2-2 2h-2v-2h2v-2h2v2zM6 4V2c-1.1 0-2 .9-2 2v2H2V4c0-1.1.9-2 2-2h2zm10 12H8v-4h8v4z"></path>
+                    </svg>
+                    <h5>Chapter 12</h5>
+                    <p>The Future of Data Systems</p>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <div class="about-section">
+        <p>
+            Hi, I’m the creator of this DDIA Quiz project.
+            I’m passionate about data, databases, and everything related
+            to scalable and robust systems. Enjoy your learning journey!
+        </p>
+    </div>
+</div>
+
+</body>
+</html>

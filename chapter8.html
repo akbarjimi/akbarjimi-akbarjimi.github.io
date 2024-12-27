@@ -1,0 +1,160 @@
+<!-- CHAPTER 8: The Trouble with Distributed Systems -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Chapter 8 - The Trouble with Distributed Systems Questions</title>
+
+  <!-- jQuery FIRST (no integrity/crossorigin) -->
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+  <!-- Bootstrap CSS (CDN, no integrity/crossorigin) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" />
+
+  <!-- Bootstrap JS (CDN) AFTER jQuery -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <style>
+    :root {
+      --color-one: #f8f3e7;
+      --color-two: #FFA26B;
+      --color-three: #FFD56B;
+      --color-four: #19647E;
+    }
+    body {
+      background-color: var(--color-one);
+      color: var(--color-four);
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .container {
+      margin-top: 30px;
+      margin-bottom: 30px;
+    }
+    .question-card {
+      background-color: var(--color-two);
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 20px;
+      transition: transform 0.2s ease;
+    }
+    .question-card:hover {
+      transform: scale(1.02);
+      background-color: var(--color-three);
+    }
+    .question-header {
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    .answers-list p {
+      margin-bottom: 5px;
+    }
+    .show-answer-btn {
+      background-color: var(--color-four);
+      color: #fff;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+    .show-answer-btn:hover {
+      opacity: 0.8;
+    }
+    .answer {
+      display: none;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+    .home-link {
+      display: inline-block;
+      margin-top: 30px;
+      text-decoration: none;
+    }
+  </style>
+
+  <script>
+    function toggleAnswer(answerId) {
+      const answerElement = document.getElementById(answerId);
+      if (answerElement.style.display === "none") {
+        answerElement.style.display = "block";
+      } else {
+        answerElement.style.display = "none";
+      }
+    }
+  </script>
+</head>
+<body>
+<div class="container">
+  <h1 class="text-center mb-4">Chapter 8 - The Trouble with Distributed Systems Questions</h1>
+
+  <!-- EASY QUESTION -->
+  <div class="question-card">
+    <div class="question-header">Easy Question</div>
+    <p>1. Why are partial failures common in distributed systems?</p>
+    <div class="answers-list">
+      <p>A. All nodes share a single power supply</p>
+      <p>B. Networks, machines, or processes can fail independently</p>
+      <p>C. Distributed systems never experience failures</p>
+      <p>D. Because all components are tightly coupled in the same process</p>
+    </div>
+    <button class="show-answer-btn" onclick="toggleAnswer('answer1')">Show/Hide Correct Answer</button>
+    <div style="display: none" id="answer1" class="answer">
+      Correct Answer: B
+    </div>
+  </div>
+
+  <!-- MEDIUM QUESTION -->
+  <div class="question-card">
+    <div class="question-header">Medium Question</div>
+    <p>2. What problem can unreliable clocks cause in distributed systems?</p>
+    <div class="answers-list">
+      <p>A. They eliminate the need for logical time</p>
+      <p>B. They ensure total ordering across events</p>
+      <p>C. They can lead to confusion about the actual sequence of events</p>
+      <p>D. They never affect system concurrency</p>
+    </div>
+    <button class="show-answer-btn" onclick="toggleAnswer('answer2')">Show/Hide Correct Answer</button>
+    <div id="answer2" class="answer">
+      Correct Answer: C
+    </div>
+  </div>
+
+  <!-- HARD QUESTION -->
+  <div class="question-card">
+    <div class="question-header">Hard Question</div>
+    <p>3. What is one strategy to mitigate network unreliability in distributed applications?</p>
+    <div class="answers-list">
+      <p>A. Assume 100% packet delivery</p>
+      <p>B. Implement automatic retries with exponential backoff and idempotent requests</p>
+      <p>C. Always use synchronous replication with zero-timeout</p>
+      <p>D. Rely solely on hardware-based duplication of routers</p>
+    </div>
+    <button class="show-answer-btn" onclick="toggleAnswer('answer3')">Show/Hide Correct Answer</button>
+    <div id="answer3" class="answer">
+      Correct Answer: B
+    </div>
+  </div>
+
+  <!-- VERY HARD QUESTION -->
+  <div class="question-card">
+    <div class="question-header">Very Hard Question</div>
+    <p>4. Why might end-to-end argument principles be crucial for distributed system design?</p>
+    <div class="answers-list">
+      <p>A. They simplify the use of a single central broker that handles all logic</p>
+      <p>B. They argue that some system functions (like error checking) are best implemented at higher levels, closer to the application</p>
+      <p>C. They remove the need for lower-level protocols altogether</p>
+      <p>D. They only apply to disk-based file systems</p>
+    </div>
+    <button class="show-answer-btn" onclick="toggleAnswer('answer4')">Show/Hide Correct Answer</button>
+    <div id="answer4" class="answer">
+      Correct Answer: B
+    </div>
+  </div>
+
+  <!-- Back to Home Link -->
+  <a href="index.html" class="home-link btn btn-secondary">Back to Home</a>
+</div>
+</body>
+</html>

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <title>Chapter 1 Questions</title>
+
+  <!-- Bootstrap CSS (CDN) -->
+  <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+  />
+
+  <!-- jQuery (CDN) -->
+  <script
+          src="https://code.jquery.com/jquery-3.5.1.min.js"
+          integrity="sha384-NiZp2Lo6mE5eSQJXz8JzB4abG9Or13uB8ZLrsCGLWxh45+xeFEvfX+fKxyv3R5fr"
+          crossorigin="anonymous">
+  </script>
+
+  <!-- Optional Bootstrap JS (CDN) -->
+  <script
+          src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js">
+  </script>
+
+  <style>
+    /* Same color palette as index page */
+    :root {
+      --color-one: #f8f3e7;  /* Light base */
+      --color-two: #FFA26B;  /* Accent */
+      --color-three: #FFD56B;/* Secondary accent */
+      --color-four: #19647E; /* Deep contrast */
+    }
+
+    body {
+      background-color: var(--color-one);
+      color: var(--color-four);
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .container {
+      margin-top: 30px;
+      margin-bottom: 30px;
+    }
+
+    /* Card style for questions */
+    .question-card {
+      background-color: var(--color-two);
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 20px;
+      transition: transform 0.2s ease;
+    }
+
+    .question-card:hover {
+      transform: scale(1.02);
+      background-color: var(--color-three);
+    }
+
+    .question-header {
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .answers-list p {
+      margin-bottom: 5px;
+    }
+
+    .show-answer-btn {
+      background-color: var(--color-four);
+      color: #fff;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+    .show-answer-btn:hover {
+      opacity: 0.8;
+    }
+
+    .answer {
+      display: none;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+  </style>
+
+  <script>
+    function toggleAnswer(answerId) {
+      const answerElement = document.getElementById(answerId);
+      if (answerElement.style.display === "none") {
+        answerElement.style.display = "block";
+      } else {
+        answerElement.style.display = "none";
+      }
+    }
+  </script>
+</head>
+
+<body>
+<div class="container">
+  <h1 class="text-center mb-4">Chapter 1 Questions</h1>
+
+  <!-- EASY QUESTION -->
+  <div class="question-card">
+    <div class="question-header">Easy Question</div>
+    <p>1. What is the primary goal of reliability in data-intensive applications?</p>
+    <div class="answers-list">
+      <p>A. Ensuring zero latency for all users</p>
+      <p>B. Guaranteeing the system can handle any hardware upgrade</p>
+      <p>C. Minimizing downtime and preventing data loss</p>
+      <p>D. Running the same version of software on all servers</p>
+    </div>
+    <button
+            class="show-answer-btn"
+            onclick="toggleAnswer('answer1')"
+    >
+      Show/Hide Correct Answer
+    </button>
+    <div id="answer1" class="answer">
+      Correct Answer: C
+    </div>
+  </div>
+
+  <!-- MEDIUM QUESTION -->
+  <div class="question-card">
+    <div class="question-header">Medium Question</div>
+    <p>2. Which of the following factors is most critical to scalability in a distributed system?</p>
+    <div class="answers-list">
+      <p>A. The total cost of the hardware used</p>
+      <p>B. The ability to add resources (servers, storage) linearly with demand</p>
+      <p>C. The popularity of the programming language used</p>
+      <p>D. The time zone where the data center is located</p>
+    </div>
+    <button
+            class="show-answer-btn"
+            onclick="toggleAnswer('answer2')"
+    >
+      Show/Hide Correct Answer
+    </button>
+    <div id="answer2" class="answer">
+      Correct Answer: B
+    </div>
+  </div>
+
+  <!-- HARD QUESTION -->
+  <div class="question-card">
+    <div class="question-header">Hard Question</div>
+    <p>3. Which statement best describes maintainability in data-intensive systems?</p>
+    <div class="answers-list">
+      <p>A. The system’s ability to guarantee no data inconsistency occurs</p>
+      <p>B. How easily developers can add new features, fix bugs, and adapt to changing requirements</p>
+      <p>C. The minimum hardware required to avoid service disruption</p>
+      <p>D. The number of end users who can simultaneously access the system</p>
+    </div>
+    <button
+            class="show-answer-btn"
+            onclick="toggleAnswer('answer3')"
+    >
+      Show/Hide Correct Answer
+    </button>
+    <div id="answer3" class="answer">
+      Correct Answer: B
+    </div>
+  </div>
+
+  <!-- VERY HARD QUESTION -->
+  <div class="question-card">
+    <div class="question-header">Very Hard Question</div>
+    <p>4. In practice, how can the trade-off between reliability, scalability, and maintainability be balanced?</p>
+    <div class="answers-list">
+      <p>A. By only focusing on minimizing downtime and ignoring all other concerns</p>
+      <p>B. Through incremental architecture reviews and careful design that aligns with business priorities</p>
+      <p>C. By using only on-premises infrastructure to control every aspect of the hardware</p>
+      <p>D. By rewriting the entire codebase each time a new technology emerges</p>
+    </div>
+    <button
+            class="show-answer-btn"
+            onclick="toggleAnswer('answer4')"
+    >
+      Show/Hide Correct Answer
+    </button>
+    <div id="answer4" class="answer">
+      Correct Answer: B
+    </div>
+  </div>
+</div>
+</body>
+</html>

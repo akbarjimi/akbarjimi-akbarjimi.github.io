@@ -1,0 +1,169 @@
+<!-- CHAPTER 4: Encoding and Evolution -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <title>Encoding and Evolution Questions</title>
+
+  <!-- Bootstrap CSS (CDN) -->
+  <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+  />
+
+  <!-- jQuery (CDN) -->
+  <script
+          src="https://code.jquery.com/jquery-3.5.1.min.js"
+          integrity="sha384-NiZp2Lo6mE5eSQJXz8JzB4abG9Or13uB8ZLrsCGLWxh45+xeFEvfX+fKxyv3R5fr"
+          crossorigin="anonymous">
+  </script>
+
+  <!-- Optional Bootstrap JS (CDN) -->
+  <script
+          src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js">
+  </script>
+
+  <style>
+    :root {
+      --color-one: #f8f3e7;
+      --color-two: #FFA26B;
+      --color-three: #FFD56B;
+      --color-four: #19647E;
+    }
+
+    body {
+      background-color: var(--color-one);
+      color: var(--color-four);
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .container {
+      margin-top: 30px;
+      margin-bottom: 30px;
+    }
+
+    .question-card {
+      background-color: var(--color-two);
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 20px;
+      transition: transform 0.2s ease;
+    }
+    .question-card:hover {
+      transform: scale(1.02);
+      background-color: var(--color-three);
+    }
+
+    .question-header {
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .answers-list p {
+      margin-bottom: 5px;
+    }
+
+    .show-answer-btn {
+      background-color: var(--color-four);
+      color: #fff;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+    .show-answer-btn:hover {
+      opacity: 0.8;
+    }
+
+    .answer {
+      display: none;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+  </style>
+
+  <script>
+    function toggleAnswer(answerId) {
+      const answerElement = document.getElementById(answerId);
+      if (answerElement.style.display === "none") {
+        answerElement.style.display = "block";
+      } else {
+        answerElement.style.display = "none";
+      }
+    }
+  </script>
+</head>
+
+<body>
+<div class="container">
+  <h1 class="text-center mb-4">Encoding and Evolution - Questions</h1>
+
+  <!-- EASY QUESTION -->
+  <div class="question-card">
+    <div class="question-header">Easy Question</div>
+    <p>1. Which of the following is a common format for encoding data in distributed systems?</p>
+    <div class="answers-list">
+      <p>A. FTP</p>
+      <p>B. CSV</p>
+      <p>C. SSH</p>
+      <p>D. TLS</p>
+    </div>
+    <button class="show-answer-btn" onclick="toggleAnswer('answer1')">Show/Hide Correct Answer</button>
+    <div id="answer1" class="answer">
+      Correct Answer: B
+    </div>
+  </div>
+
+  <!-- MEDIUM QUESTION -->
+  <div class="question-card">
+    <div class="question-header">Medium Question</div>
+    <p>2. How does schema evolution typically help in data-intensive applications?</p>
+    <div class="answers-list">
+      <p>A. It guarantees no data model changes are required</p>
+      <p>B. It allows backward/forward compatibility as data formats change over time</p>
+      <p>C. It enforces immediate updates to all clients</p>
+      <p>D. It removes the need for versioning data at all</p>
+    </div>
+    <button class="show-answer-btn" onclick="toggleAnswer('answer2')">Show/Hide Correct Answer</button>
+    <div id="answer2" class="answer">
+      Correct Answer: B
+    </div>
+  </div>
+
+  <!-- HARD QUESTION -->
+  <div class="question-card">
+    <div class="question-header">Hard Question</div>
+    <p>3. Which of these is a primary benefit of using binary encoding formats like Protocol Buffers or Avro?</p>
+    <div class="answers-list">
+      <p>A. They are human-readable without any tooling</p>
+      <p>B. They produce smaller message sizes and can enforce schemas</p>
+      <p>C. They cannot be used across different programming languages</p>
+      <p>D. They remove the need for robust parsing logic</p>
+    </div>
+    <button class="show-answer-btn" onclick="toggleAnswer('answer3')">Show/Hide Correct Answer</button>
+    <div id="answer3" class="answer">
+      Correct Answer: B
+    </div>
+  </div>
+
+  <!-- VERY HARD QUESTION -->
+  <div class="question-card">
+    <div class="question-header">Very Hard Question</div>
+    <p>4. In a large, evolving system, how might you safely introduce a new field into an existing data schema?</p>
+    <div class="answers-list">
+      <p>A. Immediately remove the old schema so no one can use it</p>
+      <p>B. Add the new field in a backward-compatible manner and allow clients to upgrade gradually</p>
+      <p>C. Convert all old data to the new schema in one massive migration before any new code is deployed</p>
+      <p>D. Force every service to read both old and new fields forever without versioning</p>
+    </div>
+    <button class="show-answer-btn" onclick="toggleAnswer('answer4')">Show/Hide Correct Answer</button>
+    <div id="answer4" class="answer">
+      Correct Answer: B
+    </div>
+  </div>
+</div>
+</body>
+</html>

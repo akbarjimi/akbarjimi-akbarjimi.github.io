@@ -1,0 +1,169 @@
+<!-- CHAPTER 3: Storage and Retrieval -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <title>Storage and Retrieval Questions</title>
+
+  <!-- Bootstrap CSS (CDN) -->
+  <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+  />
+
+  <!-- jQuery (CDN) -->
+  <script
+          src="https://code.jquery.com/jquery-3.5.1.min.js"
+          integrity="sha384-NiZp2Lo6mE5eSQJXz8JzB4abG9Or13uB8ZLrsCGLWxh45+xeFEvfX+fKxyv3R5fr"
+          crossorigin="anonymous">
+  </script>
+
+  <!-- Optional Bootstrap JS (CDN) -->
+  <script
+          src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js">
+  </script>
+
+  <style>
+    :root {
+      --color-one: #f8f3e7;
+      --color-two: #FFA26B;
+      --color-three: #FFD56B;
+      --color-four: #19647E;
+    }
+
+    body {
+      background-color: var(--color-one);
+      color: var(--color-four);
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .container {
+      margin-top: 30px;
+      margin-bottom: 30px;
+    }
+
+    .question-card {
+      background-color: var(--color-two);
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 20px;
+      transition: transform 0.2s ease;
+    }
+    .question-card:hover {
+      transform: scale(1.02);
+      background-color: var(--color-three);
+    }
+
+    .question-header {
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .answers-list p {
+      margin-bottom: 5px;
+    }
+
+    .show-answer-btn {
+      background-color: var(--color-four);
+      color: #fff;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+    .show-answer-btn:hover {
+      opacity: 0.8;
+    }
+
+    .answer {
+      display: none;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+  </style>
+
+  <script>
+    function toggleAnswer(answerId) {
+      const answerElement = document.getElementById(answerId);
+      if (answerElement.style.display === "none") {
+        answerElement.style.display = "block";
+      } else {
+        answerElement.style.display = "none";
+      }
+    }
+  </script>
+</head>
+
+<body>
+<div class="container">
+  <h1 class="text-center mb-4">Storage and Retrieval - Questions</h1>
+
+  <!-- EASY QUESTION -->
+  <div class="question-card">
+    <div class="question-header">Easy Question</div>
+    <p>1. Which data structure is commonly used as an on-disk index in databases?</p>
+    <div class="answers-list">
+      <p>A. Linked List</p>
+      <p>B. Hash Table</p>
+      <p>C. B-Tree</p>
+      <p>D. Binary Search Tree (BST) with no balancing</p>
+    </div>
+    <button class="show-answer-btn" onclick="toggleAnswer('answer1')">Show/Hide Correct Answer</button>
+    <div id="answer1" class="answer">
+      Correct Answer: C
+    </div>
+  </div>
+
+  <!-- MEDIUM QUESTION -->
+  <div class="question-card">
+    <div class="question-header">Medium Question</div>
+    <p>2. What is the main difference between OLTP (Online Transaction Processing) and OLAP (Online Analytical Processing)?</p>
+    <div class="answers-list">
+      <p>A. OLTP is batch-based, OLAP is streaming</p>
+      <p>B. OLTP handles day-to-day operations, OLAP is for aggregated analytical queries</p>
+      <p>C. OLTP never uses indexes, OLAP always uses indexes</p>
+      <p>D. They are actually the same concept with different names</p>
+    </div>
+    <button class="show-answer-btn" onclick="toggleAnswer('answer2')">Show/Hide Correct Answer</button>
+    <div id="answer2" class="answer">
+      Correct Answer: B
+    </div>
+  </div>
+
+  <!-- HARD QUESTION -->
+  <div class="question-card">
+    <div class="question-header">Hard Question</div>
+    <p>3. Why might a column-oriented storage format be advantageous for analytical queries?</p>
+    <div class="answers-list">
+      <p>A. It supports unlimited concurrent transactions</p>
+      <p>B. It improves query performance on aggregates by reading only necessary columns</p>
+      <p>C. It eliminates the need for compression</p>
+      <p>D. It reduces the overall storage requirements by discarding data it doesn't need</p>
+    </div>
+    <button class="show-answer-btn" onclick="toggleAnswer('answer3')">Show/Hide Correct Answer</button>
+    <div id="answer3" class="answer">
+      Correct Answer: B
+    </div>
+  </div>
+
+  <!-- VERY HARD QUESTION -->
+  <div class="question-card">
+    <div class="question-header">Very Hard Question</div>
+    <p>4. What is one challenge of maintaining separate data systems for transactional and analytical workloads?</p>
+    <div class="answers-list">
+      <p>A. Querying both systems always doubles query time</p>
+      <p>B. Keeping data consistent and up-to-date between OLTP and OLAP pipelines</p>
+      <p>C. Neither system supports indexing effectively</p>
+      <p>D. It forces all databases to be on the same vendor</p>
+    </div>
+    <button class="show-answer-btn" onclick="toggleAnswer('answer4')">Show/Hide Correct Answer</button>
+    <div id="answer4" class="answer">
+      Correct Answer: B
+    </div>
+  </div>
+</div>
+</body>
+</html>
